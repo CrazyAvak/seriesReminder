@@ -1,0 +1,15 @@
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bin\Debug\killerapp.exe.config
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bin\Debug\killerapp.exe
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bin\Debug\killerapp.pdb
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.csprojResolveAssemblyReference.cache
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.Form1.resources
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.Properties.Resources.resources
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.csproj.GenerateResource.Cache
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.csproj.CoreCompileInputs.cache
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.exe
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.pdb
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bin\Debug\MySql.Data.dll
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bin\Debug\MySql.Web.dll
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bin\Debug\MySql.Data.xml
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bin\Debug\MySql.Web.xml
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.addSerie.resources
