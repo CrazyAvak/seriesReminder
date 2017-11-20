@@ -31,65 +31,28 @@ namespace killerapp
             }
 
         }
-        public DataTable GetCategories()
-        {
-            DataTable dtable = new DataTable();
-            try
-            {
-                conn.Open();
-                string query = "SELECT * FROM categorie";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                MySqlDataAdapter myAdapter = new MySqlDataAdapter();
-                myAdapter.SelectCommand = cmd;                
-                myAdapter.Fill(dtable);
-                conn.Close();
-                return dtable;
-                
-            }
-            catch (Exception e)
-            {
-                throw;
-            }            
-        }
-        public DataTable getStatus()
-        {
-            DataTable dtable = new DataTable();
-            try
-            {
-                conn.Open();
-                string query = "SELECT * FROM status";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                MySqlDataAdapter myAdapter = new MySqlDataAdapter();
-                myAdapter.SelectCommand =  cmd;
-                myAdapter.Fill(dtable);
-                conn.Close();
-                return dtable;
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
-        }
-        public DataTable getRating()
+
+        public DataTable getData(string query)
         {
             DataTable dtable = new DataTable();
             try
             {
                 conn.Open();
-                string query = "SELECT * FROM rating";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataAdapter myAdapter = new MySqlDataAdapter();
                 myAdapter.SelectCommand = cmd;
                 myAdapter.Fill(dtable);
                 conn.Close();
                 return dtable;
+
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                throw; 
+                throw;
             }
         }
+                    
         public void InsertSerie(string name, string season, string episode, string categorie_id, string rating_id, string status_id)
         {
             DateTime theDate = DateTime.Now;            
@@ -105,8 +68,9 @@ namespace killerapp
             }
             catch (Exception e)
             {
-                throw;
+                MessageBox.Show(e.Message);
             }
         }
+        
     }
 }

@@ -25,7 +25,7 @@ namespace killerapp
         }
         private void populatureCategories()
         {
-            DataTable t = db.GetCategories();
+            DataTable t = db.getData("SELECT * FROM categorie");
             foreach (DataRow item in t.Rows)
             {
                 cmbCategorie.Items.Add(item["serieCategorie"]);
@@ -34,7 +34,7 @@ namespace killerapp
         }
         private void populateStatus()
         {
-            DataTable t = db.getStatus();
+            DataTable t = db.getData("SELECT * FROM status");
             foreach (DataRow item in t.Rows)
             {
                 cmbStatus.Items.Add(item["serieStatus"]);
@@ -43,7 +43,7 @@ namespace killerapp
         }
         private void populateRating()
         {
-            DataTable t = db.getRating();
+            DataTable t = db.getData("SELECT * FROM rating");
             foreach (DataRow item in t.Rows)
             {
                 cmbRating.Items.Add(item["Rating"]);
