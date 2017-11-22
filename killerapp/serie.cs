@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace killerapp
 {
-    class serie
+    public class serie
     {
+        private int id;
         private string name;
         private int season;
         private int episode;
@@ -25,5 +26,6 @@ namespace killerapp
         public string Type { get => type; set => type = value; }
         public string Rating { get => rating; set => rating = value; }
         public string Status { get => status; set => status = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

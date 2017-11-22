@@ -13,3 +13,4 @@ C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bi
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bin\Debug\MySql.Data.xml
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\bin\Debug\MySql.Web.xml
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.addSerie.resources
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\seriesReminder\killerapp\obj\Debug\killerapp.editSerie.resources

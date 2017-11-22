@@ -60,6 +60,12 @@
       <DependentUpon>addSerie.cs</DependentUpon>
     </Compile>
     <Compile Include="dbConnection.cs" />
+    <Compile Include="editSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editSerie.Designer.cs">
+      <DependentUpon>editSerie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="sqlQueries.cs" />
     <EmbeddedResource Include="addSerie.resx">
       <DependentUpon>addSerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editSerie.resx">
+      <DependentUpon>editSerie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

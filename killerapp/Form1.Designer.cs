@@ -40,6 +40,7 @@
             this.listSeries.Name = "listSeries";
             this.listSeries.Size = new System.Drawing.Size(414, 329);
             this.listSeries.TabIndex = 0;
+            this.listSeries.DoubleClick += new System.EventHandler(this.listSeries_DoubleClick);
             // 
             // button1
             // 

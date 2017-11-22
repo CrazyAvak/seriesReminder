@@ -71,6 +71,26 @@ namespace killerapp
                 MessageBox.Show(e.Message);
             }
         }
+
+        public void updateSerie(string id, string name, string season, string episode, string categorie_id, string rating_id, string status_id)
+        {
+            DateTime theDate = DateTime.Now;
+            try
+            {
+                conn.Open();
+                string query = "UPDATE series " +
+                    "SET Name = '" + name + "', Season = '" + season + "', Episode = '" + episode + "', date_updated= '" + theDate + "', " +
+                    "Categorie_idType= '" + categorie_id + "', Rating_idRating= '" + rating_id + "',Status_idStatus= '" + status_id + "' WHERE idSeries = '" + id + "' ";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
         
     }
 }

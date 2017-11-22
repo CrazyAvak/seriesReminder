@@ -184,6 +184,7 @@
             this.Controls.Add(this.cmbCategorie);
             this.Name = "addSerie";
             this.Text = "Add a new serie";
+            
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeason)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEpisode)).EndInit();
             this.ResumeLayout(false);

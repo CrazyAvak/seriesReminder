@@ -10,17 +10,20 @@ using System.Windows.Forms;
 
 namespace killerapp
 {
-    public partial class addSerie : Form
+    public partial class editSerie : Form
     {
         dbConnection db;
-        public addSerie()
+        serie updateSerie;
+        public editSerie(serie Serie)
         {
+            updateSerie = Serie;
+            InitializeComponent();
             db = new dbConnection();
             db.connectToDB();
-            InitializeComponent();
-            populatureCategories();
-            populateStatus();
             populateRating();
+            populateStatus();
+            populatureCategories();
+            fillFields();
             
         }
         private void populatureCategories()
@@ -50,12 +53,20 @@ namespace killerapp
             }
             cmbRating.SelectedIndex = 0;
         }
-
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void fillFields( )
         {
-            db.InsertSerie(tbName.Text, numericUpDownSeason.Value.ToString(), numericUpDownEpisode.Value.ToString(), Convert.ToString(cmbCategorie.SelectedIndex + 1), Convert.ToString(cmbRating.SelectedIndex + 1), Convert.ToString(cmbStatus.SelectedIndex + 1));
+            tbName.Text = updateSerie.Name;
+            numericUpDownEpisode.Value = updateSerie.Episode;
+            numericUpDownSeason.Value = updateSerie.Season;
+            cmbCategorie.SelectedItem = updateSerie.Type;
+            cmbRating.SelectedItem = updateSerie.Rating;
+            cmbStatus.SelectedItem = updateSerie.Status;
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            db.updateSerie(updateSerie.Id.ToString() , tbName.Text, numericUpDownSeason.Value.ToString(), numericUpDownEpisode.Value.ToString(), Convert.ToString(cmbCategorie.SelectedIndex + 1), Convert.ToString(cmbRating.SelectedIndex + 1), Convert.ToString(cmbStatus.SelectedIndex + 1));
             this.Close();
         }
-        
     }
 }
