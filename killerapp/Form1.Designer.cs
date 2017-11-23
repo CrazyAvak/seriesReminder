@@ -60,6 +60,7 @@
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(414, 21);
             this.cmbStatus.TabIndex = 2;
+            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -69,6 +70,9 @@
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listSeries);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

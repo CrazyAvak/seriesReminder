@@ -182,6 +182,9 @@
             this.Controls.Add(this.cmbRating);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.cmbCategorie);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "editSerie";
             this.Text = "editSerie";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEpisode)).EndInit();

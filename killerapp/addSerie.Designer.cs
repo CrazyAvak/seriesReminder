@@ -182,9 +182,11 @@
             this.Controls.Add(this.cmbRating);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.cmbCategorie);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "addSerie";
             this.Text = "Add a new serie";
-            
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeason)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEpisode)).EndInit();
             this.ResumeLayout(false);

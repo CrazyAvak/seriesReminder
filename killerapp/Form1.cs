@@ -20,7 +20,7 @@ namespace killerapp
              db = new dbConnection();
             db.connectToDB();
             populateStatus();
-            populateSeriesList2();
+            populateSeriesList2(false);
             
         }
 
@@ -33,15 +33,26 @@ namespace killerapp
 
         private void AddSerie_FormClosing1(object sender, FormClosingEventArgs e)
         {
-            populateSeriesList2();
+            populateSeriesList2(false);
         }     
 
-        private void populateSeriesList2()
+        private void populateSeriesList2(bool isstatusChange)
         {
             listSeries.Items.Clear();
             series = new List<serie>();
-            DataTable t = db.getData("SELECT idSeries,Name, Season, Episode, categorie.serieCategorie , status.serieStatus, rating.Rating " +
+            DataTable t;
+            if (isstatusChange)
+            {
+                 t = db.getData("SELECT idSeries,Name, Season, Episode, categorie.serieCategorie , status.serieStatus, rating.Rating " +
+                            "FROM `series` INNER JOIN rating ON series.Rating_idRating = rating.idRating INNER JOIN categorie ON series.Categorie_idType = categorie.idType INNER JOIN status ON series.Status_idStatus = status.idStatus" +
+                            " WHERE status.serieStatus = '" + cmbStatus.Text + "'");
+            }
+            else
+            {
+                 t = db.getData("SELECT idSeries,Name, Season, Episode, categorie.serieCategorie , status.serieStatus, rating.Rating " +
                             "FROM `series` INNER JOIN rating ON series.Rating_idRating = rating.idRating INNER JOIN categorie ON series.Categorie_idType = categorie.idType INNER JOIN status ON series.Status_idStatus = status.idStatus");
+            }
+            
             foreach (DataRow item in t.Rows)
             {
                 serie serie = new serie();
@@ -115,7 +126,19 @@ namespace killerapp
 
         private void EditSerie_FormClosing(object sender, FormClosingEventArgs e)
         {
-            populateSeriesList2();
+            populateSeriesList2(false);
+        }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbStatus.Text == "none")
+            {
+                populateSeriesList2(false);
+            }
+            else
+            {
+                populateSeriesList2(true);              
+            }
         }
     }
 }
