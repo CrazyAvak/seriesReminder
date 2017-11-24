@@ -116,12 +116,8 @@ namespace killerapp
                 editSerie.FormClosing += EditSerie_FormClosing;
             }
             catch (Exception d)
-            {
-
-                
-            }
-            
-                
+            {                
+            }                            
         }
 
         private void EditSerie_FormClosing(object sender, FormClosingEventArgs e)

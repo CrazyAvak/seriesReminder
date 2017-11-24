@@ -68,5 +68,11 @@ namespace killerapp
             db.updateSerie(updateSerie.Id.ToString() , tbName.Text, numericUpDownSeason.Value.ToString(), numericUpDownEpisode.Value.ToString(), Convert.ToString(cmbCategorie.SelectedIndex + 1), Convert.ToString(cmbRating.SelectedIndex + 1), Convert.ToString(cmbStatus.SelectedIndex + 1));
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            db.deleteData("DELETE FROM series WHERE idSeries = " + updateSerie.Id +"");
+            this.Close();
+        }
     }
 }

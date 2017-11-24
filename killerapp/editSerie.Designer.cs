@@ -41,6 +41,7 @@
             this.cmbRating = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbCategorie = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEpisode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSeason)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +75,7 @@
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(91, 226);
+            this.BtnEdit.Location = new System.Drawing.Point(169, 226);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(103, 23);
             this.BtnEdit.TabIndex = 22;
@@ -164,11 +165,22 @@
             this.cmbCategorie.Size = new System.Drawing.Size(260, 21);
             this.cmbCategorie.TabIndex = 13;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(10, 226);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // editSerie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -209,5 +221,6 @@
         private System.Windows.Forms.ComboBox cmbRating;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbCategorie;
+        private System.Windows.Forms.Button button1;
     }
 }

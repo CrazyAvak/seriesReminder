@@ -52,6 +52,22 @@ namespace killerapp
                 throw;
             }
         }
+        public void deleteData(string query)
+        {
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                conn.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
                     
         public void InsertSerie(string name, string season, string episode, string categorie_id, string rating_id, string status_id)
         {
@@ -79,7 +95,7 @@ namespace killerapp
             {
                 conn.Open();
                 string query = "UPDATE series " +
-                    "SET Name = '" + name + "', Season = '" + season + "', Episode = '" + episode + "', date_updated= '" + theDate + "', " +
+                    "SET Name = '" + name + "', Season = '" + season + "', Episode = '" + episode + "', date_updated= '" + theDate.ToString("yyyy-MM-dd H:mm:ss") + "', " +
                     "Categorie_idType= '" + categorie_id + "', Rating_idRating= '" + rating_id + "',Status_idStatus= '" + status_id + "' WHERE idSeries = '" + id + "' ";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataReader reader;
