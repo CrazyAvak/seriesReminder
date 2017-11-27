@@ -17,11 +17,10 @@ namespace killerapp
         public Form1()
         {
             InitializeComponent();
-             db = new dbConnection();
+            db = new dbConnection();
             db.connectToDB();
             populateStatus();
-            populateSeriesList2(false);
-            
+            populateSeriesList2(false);            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,20 +70,7 @@ namespace killerapp
                 serie = item.Id + " ," + item.Name + ", Season:" + item.Season + ", Episode:" + item.Episode + ", Categorie:" + item.Type + ", Status:" + item.Status + ", Rating:" + item.Rating;
                 listSeries.Items.Add(serie);
             }
-        }
-
-        private void populateSeriesList()
-        {
-            listSeries.Items.Clear();
-            DataTable t = db.getData("SELECT Name, Season, Episode, categorie.serieCategorie , status.serieStatus, rating.Rating " +
-                "FROM `series` INNER JOIN rating ON series.Rating_idRating = rating.idRating INNER JOIN categorie ON series.Categorie_idType = categorie.idType INNER JOIN status ON series.Status_idStatus = status.idStatus");
-            foreach (DataRow item in t.Rows)
-            {
-                string serie = "";
-                serie = Convert.ToString(item["Name"]) + ", Season:" + item["Season"] + ", Episode:" + item["Episode"] + ", Categorie:" + item["serieCategorie"] + ", Status:" + item["serieStatus"] + ", Rating:" + item["Rating"];
-                listSeries.Items.Add(serie);
-            }
-        }
+        }     
         private void populateStatus()
         {
             cmbStatus.Items.Add("none");
@@ -135,6 +121,11 @@ namespace killerapp
             {
                 populateSeriesList2(true);              
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

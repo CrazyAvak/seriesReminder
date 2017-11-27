@@ -20,8 +20,7 @@ namespace killerapp
             InitializeComponent();
             populatureCategories();
             populateStatus();
-            populateRating();
-            
+            populateRating();            
         }
         private void populatureCategories()
         {
@@ -56,6 +55,10 @@ namespace killerapp
             db.InsertSerie(tbName.Text, numericUpDownSeason.Value.ToString(), numericUpDownEpisode.Value.ToString(), Convert.ToString(cmbCategorie.SelectedIndex + 1), Convert.ToString(cmbRating.SelectedIndex + 1), Convert.ToString(cmbStatus.SelectedIndex + 1));
             this.Close();
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -14,22 +14,16 @@ namespace killerapp
     {
         MySqlConnection conn;
         public void connectToDB()
-        {
-            //Server=localhost;Database=seriesreminder;Uid=root;pwd=;
-            string connectionString = null;
-            
-            connectionString = "Server=localhost;Database=seriesreminder;Uid=root;Pwd=;";
+        {               
+           string  connectionString = "Server=localhost;Database=seriesreminder;Uid=root;Pwd=;";
             conn = new MySqlConnection(connectionString);            
             try
-            {
-                
-                
+            {                                
             }
             catch(Exception e)
             {
                 MessageBox.Show("not connected");
             }
-
         }
 
 
@@ -45,7 +39,6 @@ namespace killerapp
                 myAdapter.Fill(dtable);
                 conn.Close();
                 return dtable;
-
             }
             catch (Exception e)
             {
@@ -64,7 +57,6 @@ namespace killerapp
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -106,7 +98,6 @@ namespace killerapp
             {
                 MessageBox.Show(e.Message);
             }
-        }
-        
+        }        
     }
 }

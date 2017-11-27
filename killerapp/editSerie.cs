@@ -23,8 +23,7 @@ namespace killerapp
             populateRating();
             populateStatus();
             populatureCategories();
-            fillFields();
-            
+            fillFields();            
         }
         private void populatureCategories()
         {
@@ -72,6 +71,11 @@ namespace killerapp
         private void button1_Click(object sender, EventArgs e)
         {
             db.deleteData("DELETE FROM series WHERE idSeries = " + updateSerie.Id +"");
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }
